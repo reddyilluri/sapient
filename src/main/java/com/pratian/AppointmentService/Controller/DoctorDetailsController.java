@@ -1,0 +1,28 @@
+package com.pratian.AppointmentService.Controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.pratian.AppointmentService.Entities.DoctorDetails;
+import com.pratian.AppointmentService.Service.DoctorDetailsService;
+
+
+@RestController
+@RequestMapping(value="/appointment")
+@CrossOrigin(origins = "http://localhost:4200", maxAge = 3600)
+public class DoctorDetailsController {
+	@Autowired
+	DoctorDetailsService doctordetailsservice;
+	
+	
+	@RequestMapping(value="/getdoctor/{id}",method =RequestMethod.GET)
+	public DoctorDetails getById(@PathVariable(value="id")long id)
+	{
+		return doctordetailsservice.getDoctorDetails(id);
+	}
+
+}
