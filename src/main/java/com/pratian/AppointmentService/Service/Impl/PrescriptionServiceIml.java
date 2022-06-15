@@ -25,11 +25,9 @@ public class PrescriptionServiceIml implements IPrescriptionService {
 	
 	// method for add Prescriptions
 	@Override
-	public Prescriptions addMedicine(Prescriptions pre, long id)
-			throws PrescriptionServiceException, AppointmentNotFoundException {
+	public Prescriptions addMedicine(Prescriptions pre, long id) throws PrescriptionServiceException, AppointmentNotFoundException {
 		
-		Appointment oldAppointment = iApprepo.findById(id)
-				.orElseThrow(() -> new AppointmentNotFoundException("appointment not found"));
+		Appointment oldAppointment = iApprepo.findById(id).orElseThrow(() -> new AppointmentNotFoundException("appointment not found"));
 		
 		if (iPrescriptionRepo.existsById(pre.getPrescriptionId()))
 			throw new PrescriptionServiceException("Prescriptions for this id already exist");

@@ -43,7 +43,8 @@ public class AppointmentController {
 	IAppointmentService service;
 	
 	
-	@PostMapping("/addApp")
+//	@PostMapping("/addApp")
+	@RequestMapping(value="/addApp",method =RequestMethod.POST)
 	public ResponseEntity<?> addApp(@RequestBody Appointment appointment) {
 		ResponseEntity<?> response = null;
 		try {
