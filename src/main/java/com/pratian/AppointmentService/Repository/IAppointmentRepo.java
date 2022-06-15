@@ -18,7 +18,7 @@ public interface IAppointmentRepo extends JpaRepository<Appointment, Long>{
 	  public Appointment getAppointmentByIdForRecommendation(@Param(value="id") long id);
 	
 
-		//@Query(value="select a from Appointment a where a.Id=:id")
+		@Query(value="select a from Appointment a where a.id=:id")
 		public Appointment getAppointmentById(long id);
 		
 		//Adding appointment

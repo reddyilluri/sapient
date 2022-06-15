@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-
+import com.pratian.AppointmentService.Entities.Appointment;
 import com.pratian.AppointmentService.Entities.NewAppointment;
 import com.pratian.AppointmentService.Exceptions.AppointmentNotFoundException;
 import com.pratian.AppointmentService.Service.NewIAppointmentService;
@@ -56,13 +56,14 @@ public class NewAppointmentController {
 		}
 		return response;
 	}
+*/	
 	@GetMapping("/get/{id}")
 	@Operation(summary = "To find Appointment by using id")
-	public Appointment getById(@PathVariable (value = "id") long id) {
+	public NewAppointment getById(@PathVariable (value = "id") long id) {
 		return appointmentService.getAppointmentById(id);
 	}
 
-*/
+
 	@PostMapping("/appointment")
 	@Operation(summary = "To add appointment for patient")
 	public NewAppointment AddAppointment(@Valid @RequestBody NewAppointment appointment) throws AppointmentNotFoundException
@@ -78,21 +79,12 @@ public class NewAppointmentController {
 	} */
 	
 	@GetMapping("/get/")
-	@Operation(summary = "To find Appointment by using id")
+	@Operation(summary = "To find  all appointment")
 	public List<NewAppointment>  getAll() { 
 		List<NewAppointment> result = appointmentService.getAppointmentAll();
 		 
 	
 		return result;
 	}
-	
-	/*@GetMapping("/get/{id}")
-	@Operation(summary = "To find Appointment by using id")
-	public Appointment getById(@PathVariable (value = "id") long id) {
-		return appointmentService.getAppointmentById(id);
-	}*/
-	
-	
-	
 	
 }

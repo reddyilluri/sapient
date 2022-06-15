@@ -3299,3 +3299,5 @@ javax.persistence.EntityNotFoundException: Unable to find com.pratian.Appointmen
 2022-06-15 18:19:27,889 WARN  [restartedMain] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
 2022-06-15 18:19:27,902 INFO  [restartedMain] org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor : Initializing ExecutorService 'applicationTaskExecutor'
 2022-06-15 18:19:28,224 INFO  [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat started on port(s): 8091 (http) with context path '/appointment'
+2022-06-15 18:19:28,227 INFO  [restartedMain] com.pratian.AppointmentService.AppointmentServiceApplication : Started AppointmentServiceApplication in 3.33 seconds (JVM running for 26797.724)
+2022-06-15 18:19:28,228 INFO  [restartedMain] org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
