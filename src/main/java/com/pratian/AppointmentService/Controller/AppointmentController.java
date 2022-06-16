@@ -241,6 +241,8 @@ public class AppointmentController {
 //	HttpStatus returnStatus = !appointments.isEmpty() ? HttpStatus.OK : HttpStatus.CONFLICT;
 	return count;
 	
+	}
+	
 
 //method to get vitals by appointment id
 	
