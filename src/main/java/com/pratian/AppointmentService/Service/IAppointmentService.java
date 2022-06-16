@@ -31,6 +31,7 @@ public interface IAppointmentService {
 
 	public int getCancelledAppointments();
 	public int gettotalAppointments();
+	public int getclosedAppointments();
 	public List<Appointment> getfilterconfirmedAppointments();
 	public List<Appointment> getfiltercancelledAppointments();
 	public List<Appointment> getfilterclosedAppointments();
