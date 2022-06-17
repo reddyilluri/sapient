@@ -8,6 +8,7 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import com.pratian.AppointmentService.Entities.Appointment;
+import com.pratian.AppointmentService.Entities.DoctorDetails;
 
 @Repository
 public interface IAppointmentRepo extends JpaRepository<Appointment, Long>{
@@ -21,9 +22,8 @@ public interface IAppointmentRepo extends JpaRepository<Appointment, Long>{
 		@Query(value="select a from Appointment a where a.id=:id")
 		public Appointment getAppointmentById(long id);
 		
-		//Adding appointment
-		
-		
+		@Query(value="select d from  DoctorDetails d where d.id=:id")
+		public DoctorDetails getDoctorDetailsById(@Param(value ="id")long id);
 	
 }
 	

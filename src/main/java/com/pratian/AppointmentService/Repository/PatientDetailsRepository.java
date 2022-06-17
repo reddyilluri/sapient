@@ -10,8 +10,9 @@ import com.pratian.AppointmentService.Entities.PatientDetails;
 
 @Repository
 public interface PatientDetailsRepository extends JpaRepository<PatientDetails, Long> {
-	//@Query(value="select c from Comment c where c.Id=:id")
-	public PatientDetails getPatientDetailsById(long id);
+	//@Query(value="select c from Comment c where c.Id=:id");
+	@Query(value="select p from PatientDetails p where p.id=:id")
+	public PatientDetails getPatientDetailsById(@Param(value="id")long id);
 
 
 }

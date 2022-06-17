@@ -36,11 +36,13 @@ import com.pratian.AppointmentService.Service.IAppointmentService;
 @RequestMapping("/appointment")
 public class AppointmentController {
 	@Autowired
-	AppointmentServiceImpl asl;
+	public AppointmentServiceImpl asl;
 	
-	@Autowired TestServiceImpl tst;
+	@Autowired 
+	public TestServiceImpl tst;
+	
 	@Autowired
-	IAppointmentService service;
+	public IAppointmentService service;
 	
 	
 	@PostMapping("/addApp")
@@ -233,18 +235,9 @@ public class AppointmentController {
 	return appointments;
 
 	}
-
-
-	@RequestMapping(value = "api/closedAppointments", method = RequestMethod.GET)
-	public  int getCloseAppointments() {
-	int count = asl.getclosedAppointments();
-//	HttpStatus returnStatus = !appointments.isEmpty() ? HttpStatus.OK : HttpStatus.CONFLICT;
-	return count;
-	
-	}
 	
 
-//method to get vitals by appointment id
+	//method to get vitals by appointment id
 	
 	@RequestMapping(value="/get/{id}",method = RequestMethod.GET)
 	public Vitals getvitals(@PathVariable(value = "id") Long id) throws AppointmentNotFoundException

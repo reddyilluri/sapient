@@ -327,18 +327,6 @@ VitalsRepo vitalrepo;
 		}
 		return pendingAppiAppointments;
 	}
-	@Override
-	public int getclosedAppointments() {
-		// TODO Auto-generated method stub
-		List<Appointment> appiAppointments = appRepo.findAll();
-		ArrayList<Appointment> closedAppiAppointments = new ArrayList<Appointment>();
-		for (Appointment appointment : appiAppointments) {
-			if (appointment.getStatus().equalsIgnoreCase("Closed")) {
-				closedAppiAppointments.add(appointment);
-			}
-		}
-		return closedAppiAppointments.size();
-	}
 	
 }
 
