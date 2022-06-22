@@ -4,7 +4,7 @@ server:
     context-path: /appointment
 
 swagger:
-  url: https://appointment.learn.skillassure.com/
+  url: https://appointment.learn.skillassure.com/appointment
 eureka:
   client:
     register-with-eureka: false
