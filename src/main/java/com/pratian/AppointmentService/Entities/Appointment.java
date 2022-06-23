@@ -31,15 +31,15 @@ public class Appointment {
 	private long id;
 	
 	
-	@OneToOne(cascade = CascadeType.ALL)
+	@OneToOne
 	Comment comment;
-	@OneToOne(cascade = CascadeType.ALL)
+	@OneToOne
 	DoctorDetails doctordetails;
-	@OneToOne(cascade = CascadeType.ALL)
+	@OneToOne
 	PatientDetails patientdetails;
 	@Autowired	
 	
-	@OneToMany(cascade = CascadeType.ALL)
+	@OneToMany
 	@JoinColumn(name="appointment_id")
 	private List<Prescriptions> prescriptions;
 
@@ -49,13 +49,13 @@ public class Appointment {
 //	@OneToMany(targetEntity = Test.class)
 //	private List<Test> tests;
 
-	@OneToOne(cascade = CascadeType.ALL)
+	@OneToOne
 	private Feedback feedback;
 	
-	@OneToOne(cascade = CascadeType.ALL)
+	@OneToOne
 	private  Vitals vitals;
 	
-	@ManyToMany(cascade = CascadeType.ALL)
+	@ManyToMany
 	private List<Recommendation> recommendations=new ArrayList<Recommendation>();
 	
 	//@OneToMany
