@@ -9,8 +9,8 @@ import com.pratian.AppointmentService.Entities.Comment;
 
 @Repository
 public interface CommentRepo extends JpaRepository<Comment, Long> {
-	//@Query(value="select c from Comment c where c.Id=:id")
-	public Comment getCommentById(long id);
+	@Query(value="select c from Comment c where c.id=:id")
+	public Comment getCommentById(@Param(value="id") long id);
 
 
 }
