@@ -30,16 +30,31 @@ public class VitalsServiceImpl implements VitalsService {
 
 	//get list of all vitals or view vitals
 	
-	@Override
-	public List<Vitals> getVitals() {	
-		
-		//return list;
-		
-		return vitalsrepo.findAll();
-		
-		
-	}
+//	@Override
+//	public List<Vitals> getVitals() {	
+//		
+//		//return list;
+//		
+//		return vitalsrepo.findAll();
+//		
+//		
+//	}
 	
+	
+	@Override
+    public List<Vitals> getVitals() throws VitalsNotFoundException {  
+
+        if(vitalsrepo.findAll() != null)
+        {
+            return vitalsrepo.findAll();
+        }
+        else
+        {
+            throw new VitalsNotFoundException("not found");
+        }
+
+
+    }
 	
     //get one  vitals by vital id
 	@Override
