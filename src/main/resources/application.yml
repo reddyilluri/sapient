@@ -2,13 +2,6 @@ server:
   port: 8091
   servlet:
     context-path: /appointment
-  ssl:
-
-    key-alias: selfsigned_localhost_sslserver
-    key-store: classpath:ssl-server.jks
-    key-store-type: JKS
-    key-password: changeit
-
 
   
 spring:
