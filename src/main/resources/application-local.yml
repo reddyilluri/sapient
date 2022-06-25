@@ -2,7 +2,6 @@ server:
   port: 8091
   servlet:
     context-path: /appointment
-<<<<<<< HEAD
 spring:
   application:
     name: appointment-service 
@@ -23,11 +22,6 @@ spring:
 swagger:
   url: https://appointment.learn.skillassure.com/appointment
 
-=======
-
-swagger:
-  url: https://appointment.learn.skillassure.com/appointment
->>>>>>> 2b71a836e5cc4ff286659f7a7507469d7c2e2f61
 eureka:
   client:
     register-with-eureka: false
@@ -35,25 +29,15 @@ eureka:
     service-url:
       defaultZone: http://localhost:8761/eureka/
   instance:
-    hostname: localhost
-<<<<<<< HEAD
+    hostname: 106.51.36.182
 
 logging:
   file:
     name: inventory.log`
-=======
-logging:
-  file:
-    name: inventory.log
->>>>>>> 2b71a836e5cc4ff286659f7a7507469d7c2e2f61
   pattern:
     console: '%d %-5level %logger : %msg%n'
     file: '%d %-5level [%thread] %logger : %msg%n'
   level:
     '[org.springframework.web]': INFO
     '[com.ros.inventory]': DEBUG
-<<<<<<< HEAD
     '[org.hibernate]': INFO
-=======
-    '[org.hibernate]': INFO
->>>>>>> 2b71a836e5cc4ff286659f7a7507469d7c2e2f61
