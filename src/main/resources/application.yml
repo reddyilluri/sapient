@@ -7,4 +7,8 @@ spring:
   application:
     name: appointment-service
   profiles:
+<<<<<<< HEAD
     active: CorsConfigure
+=======
+    active: local
+>>>>>>> 2b71a836e5cc4ff286659f7a7507469d7c2e2f61

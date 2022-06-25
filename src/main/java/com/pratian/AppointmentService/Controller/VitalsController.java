@@ -6,6 +6,7 @@ import java.util.List;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,9 +19,12 @@ import com.pratian.AppointmentService.Exceptions.AppointmentNotFoundException;
 import com.pratian.AppointmentService.Exceptions.VitalsNotFoundException;
 import com.pratian.AppointmentService.Service.Impl.VitalsServiceImpl;
 
+import io.swagger.v3.oas.annotations.Operation;
+
 @CrossOrigin(origins ="http://localhost:4200")
 
 @RestController
+// @CrossOrigin(origins = "http://localhost:4200", allowCredentials = "true", allowedHeaders = "*", exposedHeaders = "If_Match")
 @RequestMapping("/vitals")
 
 public class VitalsController {
@@ -31,14 +35,30 @@ public class VitalsController {
 	
 	
 
-	@RequestMapping(value="/getvitals",method = RequestMethod.GET)
-	public List<Vitals>getVitals()
-	{
-		
-		return vitalsservice.getVitals();
-		
-	}
+//	@RequestMapping(value="/getvitals",method = RequestMethod.GET)
+//	public List<Vitals>getVitals()
+//	{
+//		
+//		return vitalsservice.getVitals();
+//		
+//	}
 	
+	
+	@GetMapping(value = "/getallvitals")
+    @Operation(summary = "to get all vitals")
+    public ResponseEntity<?> getallvitals(){
+        ResponseEntity<?> response = null;
+        try
+        {
+            response = new ResponseEntity<>(vitalsservice.getVitals(),HttpStatus.OK);
+        }
+        catch(VitalsNotFoundException e)
+        {
+            response = new ResponseEntity<>(e.getMessage(),HttpStatus.NOT_FOUND);
+        }
+        return response;
+
+    }
 	
 	//get vitals by id
 	@RequestMapping(value="/getvitals/{vitalsId}",method = RequestMethod.GET)

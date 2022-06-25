@@ -23,6 +23,7 @@ import com.pratian.AppointmentService.Service.Impl.TestServiceImpl;
 import io.swagger.v3.oas.annotations.Operation;
 @CrossOrigin(origins = "*")
 @RestController
+//@CrossOrigin(origins = "http://localhost:4200", allowCredentials = "true", allowedHeaders = "*", exposedHeaders = "If_Match")
 @RequestMapping("/test")
 public class TestController {
 	@Autowired

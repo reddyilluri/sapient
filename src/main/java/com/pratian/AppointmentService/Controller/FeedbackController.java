@@ -18,6 +18,7 @@ import com.pratian.AppointmentService.Exceptions.FeedbackNotFoundException;
 import com.pratian.AppointmentService.Service.Impl.FeedbackServiceImpl;
 
 @RestController
+// @CrossOrigin(origins = "http://localhost:4200", allowCredentials = "true", allowedHeaders = "*", exposedHeaders = "If_Match")
 @CrossOrigin(origins = "http://localhost:4200")
 @RequestMapping("/feedback")
 public class FeedbackController {
