@@ -18,9 +18,9 @@ import com.pratian.AppointmentService.Exceptions.DoctorNameNotFoundException;
 import com.pratian.AppointmentService.Service.Impl.RecommendationServiceImpl;
 
 
-//@CrossOrigin(origins = "*")
+@CrossOrigin(origins = "*")
 @RestController
-@CrossOrigin(origins = "http://localhost:4200", allowCredentials = "true", allowedHeaders = "*", exposedHeaders = "If_Match")
+//@CrossOrigin(origins = "http://localhost:4200", allowCredentials = "true", allowedHeaders = "*", exposedHeaders = "If_Match")
 @RequestMapping("/recommendation")
 public class RecommendationController {
 
