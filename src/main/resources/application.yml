@@ -2,13 +2,17 @@ server:
   port: 8091
   servlet:
     context-path: /appointment
-    
+  ssl:
+
+    key-alias: selfsigned_localhost_sslserver
+    key-store: classpath:ssl-server.jks
+    key-store-type: JKS
+    key-password: changeit
+
+
+  
 spring:
   application:
     name: appointment-service
   profiles:
-<<<<<<< HEAD
-    active: CorsConfigure
-=======
     active: local
->>>>>>> 2b71a836e5cc4ff286659f7a7507469d7c2e2f61
