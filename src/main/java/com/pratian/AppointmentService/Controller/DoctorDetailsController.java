@@ -13,7 +13,8 @@ import com.pratian.AppointmentService.Service.DoctorDetailsService;
 
 @RestController
 @RequestMapping(value="/appointment")
-@CrossOrigin(origins = "http://localhost:4200", maxAge = 3600)
+@CrossOrigin(origins = "http://localhost:4200", allowCredentials = "true", allowedHeaders = "*", exposedHeaders = "If_Match")
+//@CrossOrigin(origins = "http://localhost:4200", maxAge = 3600)
 public class DoctorDetailsController {
 	@Autowired
 	DoctorDetailsService doctordetailsservice;
