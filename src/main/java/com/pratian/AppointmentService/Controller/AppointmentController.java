@@ -31,7 +31,8 @@ import com.pratian.AppointmentService.Service.IAppointmentService;
 
 
 
-@CrossOrigin(origins = "*")
+@CrossOrigin(origins = "http://localhost:4200", allowCredentials = "true", allowedHeaders = "*", exposedHeaders = "If_Match")
+//@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/appointment")
 public class AppointmentController {
