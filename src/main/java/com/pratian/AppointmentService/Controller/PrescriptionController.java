@@ -22,8 +22,8 @@ import com.pratian.AppointmentService.Service.Impl.PrescriptionServiceIml;
 */
 
 @RestController
-@CrossOrigin(origins = "http://localhost:4200", allowCredentials = "true", allowedHeaders = "*", exposedHeaders = "If_Match")
-//@CrossOrigin(origins = "*")//by pooja
+// @CrossOrigin(origins = "http://localhost:4200", allowCredentials = "true", allowedHeaders = "*", exposedHeaders = "If_Match")
+@CrossOrigin(origins = "*")//by pooja
 
 @RequestMapping("/Prescriptions")
 public class PrescriptionController {
