@@ -1,5 +1,6 @@
 package com.pratian.AppointmentService.Entities;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -10,7 +11,7 @@ public class Recommendation {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long recommendationId;
-	@OneToOne
+	@OneToOne(cascade = CascadeType.ALL)
 	private DoctorDetails doctor;
 	public long getRecommendationId() {
 		return recommendationId;

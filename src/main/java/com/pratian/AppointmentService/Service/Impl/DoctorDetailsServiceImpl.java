@@ -17,6 +17,7 @@ public class DoctorDetailsServiceImpl implements DoctorDetailsService {
 	@Override
 	public DoctorDetails getDoctorDetails(long id) {
 		return appointmentrepository.getAppointmentById(id).getDoctordetails();
+//		return doctordetailsrepository.getDoctorDetailsById(id);
 	}
 	
 	

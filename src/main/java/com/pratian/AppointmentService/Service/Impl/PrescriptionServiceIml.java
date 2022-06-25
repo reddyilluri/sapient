@@ -34,7 +34,7 @@ public class PrescriptionServiceIml implements IPrescriptionService {
 		if (iPrescriptionRepo.existsById(pre.getPrescriptionId()))
 			throw new PrescriptionServiceException("Prescriptions for this id already exist");
 		else {
-			iPrescriptionRepo.save(pre);
+//			iPrescriptionRepo.save(pre);
 			
 			oldAppointment.getPrescriptions().add(pre);			
 			iApprepo.save(oldAppointment);	

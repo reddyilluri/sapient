@@ -36,11 +36,13 @@ import com.pratian.AppointmentService.Service.IAppointmentService;
 @RequestMapping("/appointment")
 public class AppointmentController {
 	@Autowired
-	AppointmentServiceImpl asl;
+	public AppointmentServiceImpl asl;
 	
-	@Autowired TestServiceImpl tst;
+	@Autowired 
+	public TestServiceImpl tst;
+	
 	@Autowired
-	IAppointmentService service;
+	public IAppointmentService service;
 	
 	
 	@PostMapping("/addApp")

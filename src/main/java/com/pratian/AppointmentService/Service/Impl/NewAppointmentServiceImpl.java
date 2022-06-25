@@ -29,11 +29,12 @@ public class NewAppointmentServiceImpl implements NewIAppointmentService {
 	}
 	
 
-	/*@Override
-	public Appointment getAppointmentById(long id) {
+	@Override
+	public NewAppointment getAppointmentById(long id) {
 		// TODO Auto-generated method stub
-		return appointmentRepo.getMobilePhoneById(id);
-	}*/
+		//return appointmentRepo.getAppointmentById(id);
+		return appointmentRepo.findById(id).get();
+	}
 
 	/*@Override
 	public Appointment getAppointmentById(long id) {

@@ -19,6 +19,11 @@ public class PatientDetailsServiceImpl implements PatientDetailsService {
 	public  PatientDetails getPatientDetails(long id) {
 		return appointmentrepository.getAppointmentById(id).getPatientdetails();
 	}
+//	@Override
+//	public  PatientDetails getPatientDetails(long id) {
+//		return patientdetailsrepository.getPatientDetailsById(id);
+//	}
+//	
 	
 	
 	

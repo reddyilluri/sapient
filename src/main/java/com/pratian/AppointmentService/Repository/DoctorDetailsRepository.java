@@ -11,7 +11,8 @@ import com.pratian.AppointmentService.Entities.DoctorDetails;
 @Repository
 public interface DoctorDetailsRepository extends JpaRepository<DoctorDetails, Long> {
 	//@Query(value="select c from Comment c where c.Id=:id")
-	public DoctorDetails getDoctorDetailsById(long id);
+	@Query(value="select d from  DoctorDetails d where d.id=:id")
+	public DoctorDetails getDoctorDetailsById(@Param(value ="id")long id);
 
 
 }

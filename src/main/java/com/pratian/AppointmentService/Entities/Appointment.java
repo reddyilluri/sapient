@@ -38,7 +38,8 @@ public class Appointment {
 	@OneToOne
 	PatientDetails patientdetails;
 	@Autowired	
-	@OneToMany(targetEntity = Prescriptions.class)
+	
+	@OneToMany
 	@JoinColumn(name="appointment_id")
 	private List<Prescriptions> prescriptions;
 
