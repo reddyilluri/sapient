@@ -27,7 +27,8 @@ import io.swagger.v3.oas.annotations.Operation;
 
 
 @RestController
-@CrossOrigin(origins = "http://localhost:4200", allowCredentials = "true", allowedHeaders = "*", exposedHeaders = "If_Match")
+// @CrossOrigin(origins = "http://localhost:4200", allowCredentials = "true", allowedHeaders = "*", exposedHeaders = "If_Match")
+@CrossOrigin(origins = "http://localhost:4200")
 
 public class NewAppointmentController {
 	private static Logger logger=LoggerFactory.getLogger(NewAppointmentController.class);
