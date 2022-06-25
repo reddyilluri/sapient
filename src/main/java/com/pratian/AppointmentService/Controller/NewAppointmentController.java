@@ -25,8 +25,9 @@ import com.pratian.AppointmentService.Service.NewIAppointmentService;
 
 import io.swagger.v3.oas.annotations.Operation;
 
-@CrossOrigin(origins = "http://localhost:4200")
+
 @RestController
+@CrossOrigin(origins = "http://localhost:4200", allowCredentials = "true", allowedHeaders = "*", exposedHeaders = "If_Match")
 
 public class NewAppointmentController {
 	private static Logger logger=LoggerFactory.getLogger(NewAppointmentController.class);
