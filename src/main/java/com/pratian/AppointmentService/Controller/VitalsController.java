@@ -21,8 +21,7 @@ import com.pratian.AppointmentService.Service.Impl.VitalsServiceImpl;
 
 import io.swagger.v3.oas.annotations.Operation;
 
-@CrossOrigin(origins ="http://localhost:4200")
-
+@CrossOrigin(origins ="https://localhost:4200")
 @RestController
 // @CrossOrigin(origins = "http://localhost:4200", allowCredentials = "true", allowedHeaders = "*", exposedHeaders = "If_Match")
 @RequestMapping("/vitals")
