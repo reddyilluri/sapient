@@ -9,10 +9,10 @@ public interface VitalsService {
 
 	public List<Vitals>getVitals() throws VitalsNotFoundException;
 
-	public Vitals getVitalsById(long vitalsId) throws VitalsNotFoundException;
+	public Vitals getVitalsById(long id) throws VitalsNotFoundException;
 	public Vitals saveVital(Vitals vital) throws VitalsNotFoundException;
 	//public Vitals updateVital(Vitals vital);
-	public Vitals updateVital( long vitalsID ,Vitals vital) throws VitalsNotFoundException;
+	public Vitals updateVital( long id ,Vitals vital) throws VitalsNotFoundException;
 
 
 
