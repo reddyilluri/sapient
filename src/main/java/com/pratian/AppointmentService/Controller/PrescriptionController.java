@@ -15,16 +15,10 @@ import com.pratian.AppointmentService.Exceptions.AppointmentNotFoundException;
 import com.pratian.AppointmentService.Exceptions.PrescriptionServiceException;
 import com.pratian.AppointmentService.Service.Impl.PrescriptionServiceIml;
 
-/*
- * PrescriptionController class written by pooja
-	for performing crud 
-	operation on Prescription Entity
-*/
 
+@CrossOrigin(origins = "*")
 @RestController
 // @CrossOrigin(origins = "http://localhost:4200", allowCredentials = "true", allowedHeaders = "*", exposedHeaders = "If_Match")
-@CrossOrigin(origins = "*")//by pooja
-
 @RequestMapping("/Prescriptions")
 public class PrescriptionController {
 	@Autowired
