@@ -58,13 +58,13 @@ public class VitalsServiceImpl implements VitalsService {
 	
     //get one  vitals by vital id
 	@Override
-	public Vitals getVitalsById(long vitalsId) throws  VitalsNotFoundException {
+	public Vitals getVitalsById(long id) throws  VitalsNotFoundException {
 		
 		
 		//return vitalsrepo.findByvitalId(vitalsId).orElseThrow(() -> new VitalsNotFoundException(vitalsId));
-		if( vitalsrepo.existsById(vitalsId))
+		if( vitalsrepo.existsById(id))
 		{
-		return	vitalsrepo.findByvitalId(vitalsId);
+		return	vitalsrepo.findByvitalId(id);
 			
 		}else 
 		{
@@ -96,11 +96,11 @@ public class VitalsServiceImpl implements VitalsService {
 	
 	//update vitals by id by vital id
 		@Override
-		public Vitals updateVital(long vitalsId,Vitals vital)  throws  VitalsNotFoundException  {
+		public Vitals updateVital(long id,Vitals vital)  throws  VitalsNotFoundException  {
 		
-			if( vitalsrepo.existsById(vitalsId))
+			if( vitalsrepo.existsById(id))
 			{
-				Vitals v = vitalsrepo.findById(vitalsId).get();
+				Vitals v = vitalsrepo.findById(id).get();
 				v.setECG(vital.getECG());
 				v.setDiabetes(vital.getDiabetes());
 				v.setTemperature(vital.getTemperature());
