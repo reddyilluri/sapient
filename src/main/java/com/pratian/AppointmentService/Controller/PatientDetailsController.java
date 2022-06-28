@@ -9,10 +9,9 @@ import org.springframework.web.bind.annotation.RestController;
 import com.pratian.AppointmentService.Entities.PatientDetails;
 import com.pratian.AppointmentService.Service.PatientDetailsService;
 
-
+@CrossOrigin(origins = "https://localhost:4200")
 @RestController
 // @CrossOrigin(origins = "http://localhost:4200", allowCredentials = "true", allowedHeaders = "*", exposedHeaders = "If_Match")
-@CrossOrigin(origins = "http://localhost:4200")
 @RequestMapping(value="/appointment")
 
 public class PatientDetailsController {
