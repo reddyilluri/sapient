@@ -22,6 +22,7 @@ import com.pratian.AppointmentService.Service.Impl.VitalsServiceImpl;
 import io.swagger.v3.oas.annotations.Operation;
 
 @CrossOrigin(origins ="https://localhost:4200")
+
 @RestController
 // @CrossOrigin(origins = "http://localhost:4200", allowCredentials = "true", allowedHeaders = "*", exposedHeaders = "If_Match")
 @RequestMapping("/vitals")
@@ -60,23 +61,41 @@ public class VitalsController {
     }
 	
 	//get vitals by id
-	@RequestMapping(value="/getvitals/{vitalsId}",method = RequestMethod.GET)
-	public  ResponseEntity<?> getVitalsById(@PathVariable String vitalsId) 
+	@RequestMapping(value="/getvitals/{id}",method = RequestMethod.GET)
+	public  ResponseEntity<?> getVitalsById(@PathVariable(value = "id" ) long id) 
 			throws VitalsNotFoundException
 	{
 		ResponseEntity<?> responseEntity = null;
 		
 		try {
-			responseEntity = new ResponseEntity<>( vitalsservice.getVitalsById(Long.parseLong(vitalsId)), HttpStatus.OK);
+			responseEntity = new ResponseEntity<>( vitalsservice.getVitalsById(id), HttpStatus.OK);
 		} catch ( VitalsNotFoundException e) {
 
 			responseEntity = new ResponseEntity<>(e.getMessage(), HttpStatus.OK);
 		}
 		return  responseEntity;	
+		
 		//return vitalsservice.getVitalsById(Long.parseLong(vitalsId));
 	}
 	
-	
+//	//get vitals by id
+//		@RequestMapping(value="/getvitals/{vitalsId}",method = RequestMethod.GET)
+//		public  ResponseEntity<?> getVitalsById(@PathVariable String vitalsId) 
+//				throws VitalsNotFoundException
+//		{
+//			ResponseEntity<?> responseEntity = null;
+//			
+//			try {
+//				responseEntity = new ResponseEntity<>( vitalsservice.getVitalsById(Long.parseLong(vitalsId)), HttpStatus.OK);
+//			} catch ( VitalsNotFoundException e) {
+//
+//				responseEntity = new ResponseEntity<>(e.getMessage(), HttpStatus.OK);
+//			}
+//			return  responseEntity;	
+//			//return vitalsservice.getVitalsById(Long.parseLong(vitalsId));
+//		}
+//		
+		
 	
 	//Add or save vitals by vital id
 	
@@ -95,7 +114,7 @@ public class VitalsController {
 	
 
 	@RequestMapping(value="/updatevitals/{vitalsId}",method = RequestMethod.PUT)
-	public Vitals readVital(@PathVariable(value = "vitalsId") Long id, @RequestBody Vitals vital) throws VitalsNotFoundException
+	public Vitals readVital(@PathVariable(value = "id") Long id, @RequestBody Vitals vital) throws VitalsNotFoundException
 	{
 		return vitalsservice.updateVital(id, vital);
 		
