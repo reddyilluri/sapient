@@ -30,7 +30,7 @@ eureka:
     service-url:
       defaultZone: http://localhost:8761/eureka/
   instance:
-    hostname: 106.51.36.182
+    hostname: localhost
 
 logging:
   file:
