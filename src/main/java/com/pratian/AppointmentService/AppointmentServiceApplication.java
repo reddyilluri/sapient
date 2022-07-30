@@ -18,7 +18,7 @@ import io.swagger.v3.oas.models.servers.Server;
 @SpringBootApplication
 //@EnableEurekaClient
 public class AppointmentServiceApplication {
-	@Value(value = "${swagger.url.productionURL}")
+	@Value(value = "${productionURL}")
     public String productionURL;
    // @Value(value = "${swagger.url.localURL}")
     //public String localURL;
