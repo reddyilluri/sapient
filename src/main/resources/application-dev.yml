@@ -21,7 +21,7 @@ spring:
 
 
 swagger:
-  url: http://40.82.154.151:8091/appointment
+  productionURL: http://40.82.154.151:8091/appointment
 
 eureka:
   client:
