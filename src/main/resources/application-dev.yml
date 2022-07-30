@@ -7,7 +7,7 @@ spring:
     name: appointment-service 
 
   datasource:
-    url: jdbc:mysql://db.ccb27u4ngh0j.ap-south-1.rds.amazonaws.com:3306/PatientServicedatabase?createDatabaseIfNotExist=true
+    url: jdbc:mysql://40.82.154.151:3306/appointmentservice?createDatabaseIfNotExist=true
     username: admin
     password: qwerty12345
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -21,7 +21,7 @@ spring:
 
 
 swagger:
-  url: https://appointment.learn.skillassure.com/appointment
+  url: http://40.82.154.151:8091/appointment
 
 eureka:
   client:
