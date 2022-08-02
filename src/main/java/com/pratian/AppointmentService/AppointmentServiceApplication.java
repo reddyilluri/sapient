@@ -1,4 +1,4 @@
-ackage com.pratian.AppointmentService;
+package com.pratian.AppointmentService;
 
 import java.util.ArrayList;
 import java.util.List;
