@@ -21,7 +21,7 @@ spring:
 
 
 swagger:
-  productionURL: http://40.82.154.151:8091/appointment
+  productionURL: https://appointment.eurofins.skillassure.com/appointment
 
 eureka:
   client:
