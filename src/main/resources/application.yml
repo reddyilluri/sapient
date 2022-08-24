@@ -8,4 +8,4 @@ spring:
   application:
     name: appointment-service
   profiles:
-    active: dev
+    active: local
