@@ -7,7 +7,7 @@ spring:
     name: appointment-service 
 
   datasource:
-    url: jdbc:mysql://40.82.154.151:3306/appointmentservice?createDatabaseIfNotExist=true
+    url: jdbc:mysql://43.205.214.236:3306/appointmentservice?createDatabaseIfNotExist=true
     username: root
     password: root
     driver-class-name: com.mysql.cj.jdbc.Driver
