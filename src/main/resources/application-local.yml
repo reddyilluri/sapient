@@ -8,7 +8,7 @@ spring:
     name: appointment-service 
 
   datasource:
-    url: jdbc:mysql://localhost:3306/appointmenttServicedatabase?createDatabaseIfNotExist=true
+    url: jdbc:mysql://43.205.214.236:3306/appointmenttServicedatabase?createDatabaseIfNotExist=true
     #url: jdbc:mysql://db.ccb27u4ngh0j.ap-south-1.rds.amazonaws.com:3306/appointmentService?createDatabaseIfNotExist=true
     username: root
     password: root
