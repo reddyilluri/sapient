@@ -23,8 +23,8 @@ spring:
            
 swagger:
   url:
-     #productionURL: https://15.206.153.116:7777/appointment
-     localURL: https://localhost:${server.port}/appointment
+     productionURL: https://43.205.214.236:7777/appointment
+     #localURL: https://localhost:${server.port}/appointment
 
   
 
